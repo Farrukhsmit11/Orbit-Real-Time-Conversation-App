@@ -1,0 +1,176 @@
+
+
+.composer-wrap {
+  margin: 0 24px 19px;
+  padding: 10px 13px 9px;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 15px;
+  background: rgba(30, 29, 38, .85);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .12);
+}
+
+.composer-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.composer-tools {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.composer-tools .ant-btn {
+  color: #898695;
+  width: 30px;
+  height: 30px;
+}
+
+.composer-tools .ant-btn:hover {
+  color: #c3b9ff !important;
+  background: rgba(255, 255, 255, .06) !important;
+}
+
+.tool-divider {
+  height: 16px;
+  width: 1px;
+  background: var(--line);
+  margin: 0 6px;
+}
+
+.composer-hint {
+  color: #696774;
+  font-size: 9px;
+}
+
+.composer-hint kbd {
+  color: #9894a2;
+}
+
+.composer-input-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+}
+
+.composer-input-row .ant-input {
+  color: #f5f2fb;
+  line-height: 1.55;
+  padding: 7px 2px;
+  font-size: 12px;
+  resize: none;
+}
+
+.composer-input-row .ant-input::placeholder {
+  color: #777482;
+}
+
+.voice-button.ant-btn {
+  color: #aaa6b4;
+  margin: 0 1px 1px 0;
+}
+
+.voice-button.is-recording {
+  color: #ff7b82;
+  background: rgba(255, 91, 100, .13);
+  animation: recording-pulse 1.2s infinite;
+}
+
+@keyframes recording-pulse {
+  50% {
+    box-shadow: 0 0 0 5px rgba(255, 91, 100, .09);
+  }
+}
+
+.send-button.ant-btn {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  background: linear-gradient(145deg, #9b8cff, #7461e1);
+  box-shadow: 0 5px 13px rgba(111, 88, 223, .3);
+  flex: 0 0 34px;
+}
+
+.send-button.ant-btn:hover {
+  background: #a596ff !important;
+  transform: translateY(-1px);
+}
+
+.emoji-anchor {
+  position: relative;
+}
+
+.emoji-picker {
+  position: absolute;
+  bottom: 40px;
+  left: -38px;
+  display: flex;
+  gap: 2px;
+  padding: 7px;
+  border-radius: 12px;
+  background: #2a2933;
+  border: 1px solid rgba(255, 255, 255, .1);
+  box-shadow: 0 8px 25px #0007;
+  z-index: 10;
+}
+
+.emoji-picker button {
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.emoji-picker button:hover {
+  background: rgba(255, 255, 255, .09);
+}
+
+.recording-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 2px 1px;
+  color: #ff9298;
+  font-size: 10px;
+}
+
+.recording-label span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff626b;
+  animation: connection-pulse 1s infinite;
+}
+
+.recording-label button {
+  border: 0;
+  background: transparent;
+  color: #aaa5b3;
+  margin-left: auto;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+
+  .composer-wrap {
+    margin: 0 9px 9px;
+    padding: 8px 9px;
+  }
+
+  .composer-hint {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .composer-tools .ant-btn {
+    width: 28px;
+    height: 28px;
+  }
+}

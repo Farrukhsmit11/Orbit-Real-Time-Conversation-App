@@ -1,0 +1,151 @@
+
+
+.message-stream {
+  overflow-y: auto;
+  flex: 1;
+  padding: 22px 6.5% 18px;
+  scrollbar-width: thin;
+  scrollbar-color: #35333e transparent;
+}
+
+.date-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 1px 0 25px;
+  color: #777482;
+  font-size: 10px;
+  justify-content: center;
+}
+
+.date-divider::before,
+.date-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  max-width: 120px;
+  background: var(--line);
+}
+
+.voice-preview {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: min(310px, 70%);
+  margin: 0 0 17px 34px;
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 255, 255, .045);
+  border-radius: 5px 14px 14px 14px;
+  background: #222129;
+}
+
+.voice-avatar {
+  display: grid;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #b6a6f1, #7d72bd);
+  color: white;
+  font: 700 9px "Manrope", sans-serif;
+}
+
+.voice-play {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #c2b6ff;
+  background: rgba(255, 255, 255, .08);
+  font-size: 11px;
+}
+
+.voice-duration {
+  color: #c5c1d1;
+  font-size: 9px;
+}
+
+.waveform {
+  height: 28px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.waveform i {
+  display: block;
+  flex: 1;
+  min-width: 2px;
+  border-radius: 3px;
+  background: #b1a4fa;
+  opacity: .8;
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  width: max-content;
+  margin: 2px 0 4px 34px;
+  color: #8d8997;
+  font-size: 10px;
+}
+
+.typing-avatar {
+  display: grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  color: white;
+  font-size: 8px;
+  margin-right: 2px;
+}
+
+.typing-indicator i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #a397ff;
+  animation: dot-bounce .9s infinite ease-in-out;
+}
+
+.typing-indicator i:nth-last-child(2) {
+  animation-delay: .14s;
+}
+
+.typing-indicator i:last-child {
+  animation-delay: .28s;
+}
+
+@keyframes dot-bounce {
+
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: .5;
+  }
+
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .message-stream {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 760px) {
+
+  .message-stream {
+    padding: 18px 13px 13px;
+  }
+}

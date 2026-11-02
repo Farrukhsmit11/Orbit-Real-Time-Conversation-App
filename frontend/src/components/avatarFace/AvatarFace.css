@@ -1,0 +1,52 @@
+
+
+.avatar-face.ant-avatar {
+  font: 700 12px "Manrope", sans-serif;
+  color: #faf8ff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12);
+}
+
+.avatar-you {
+  background: linear-gradient(140deg, #efaa8d, #a65c67);
+}
+
+.avatar-lilac {
+  background: linear-gradient(145deg, #a692e8, #7163bd);
+}
+
+.avatar-coral {
+  background: linear-gradient(145deg, #eea083, #c36c79);
+}
+
+.avatar-mint {
+  background: linear-gradient(145deg, #70c4ae, #428c85);
+}
+
+.avatar-blue {
+  background: linear-gradient(145deg, #739de0, #5362a6);
+}
+
+.avatar-gold {
+  background: linear-gradient(145deg, #eac57b, #b37b5e);
+}
+
+.avatar-plum {
+  background: linear-gradient(145deg, #c47dbb, #865d9d);
+}
+
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #63d9a1;
+  border-radius: 50%;
+  margin-right: 5px;
+  box-shadow: 0 0 9px #63d9a188;
+}
+
+.thread-avatar-badge .ant-badge-dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #191820;
+  box-shadow: none;
+}

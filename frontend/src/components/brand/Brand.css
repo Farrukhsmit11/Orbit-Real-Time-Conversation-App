@@ -1,0 +1,34 @@
+
+
+.brand {
+  color: #f8f6ff;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  font: 800 24px "Manrope", sans-serif;
+  letter-spacing: -1.3px;
+  text-decoration: none;
+}
+
+.brand-period {
+  color: #a496ff;
+}
+
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #a899ff, #6751e8);
+  box-shadow: 0 5px 16px #806cff50;
+  transform: rotate(-8deg);
+}
+
+.brand-mark span {
+  width: 11px;
+  height: 11px;
+  border: 2px solid white;
+  border-radius: 4px 8px 4px 8px;
+  transform: rotate(8deg);
+}
