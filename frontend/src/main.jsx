@@ -7,7 +7,7 @@ import "./styles.css";
 import { Provider } from "react-redux";
 import { store } from "./store/store.js";
 import { BrowserRouter } from "react-router-dom";
-import setupInterceptor from "./utils/interceptor.js";
+import setupInterceptor from "./utils/Interceptor.jsx"
 
 setupInterceptor();
 

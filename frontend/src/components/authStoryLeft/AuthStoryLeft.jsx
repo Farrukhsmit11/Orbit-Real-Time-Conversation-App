@@ -9,15 +9,26 @@ export default function AuthStory() {
       <div className="story-glow story-glow-two" />
 
       <div className="story-content">
-        <div className="story-eyebrow"><span /> YOUR PEOPLE, A LITTLE CLOSER</div>
+        <div className="story-eyebrow">
+          <span /> YOUR PEOPLE, A LITTLE CLOSER
+        </div>
 
-        <h1>Good conversations<br />change <span>everything.</span></h1>
+        <h1>
+          Good conversations
+          <br />
+          change <span>everything.</span>
+        </h1>
 
-        <p>A calmer, more considered space for the people and ideas you care about.</p>
+        <p>
+          A calmer, more considered space for the people and ideas you care
+          about.
+        </p>
 
         <div className="story-preview">
           <div className="preview-topline">
-            <span className="preview-live"><i /> live conversation</span>
+            <span className="preview-live">
+              <i /> live conversation
+            </span>
             <span>just now</span>
           </div>
           <div className="preview-message preview-message-left">
@@ -27,8 +38,15 @@ export default function AuthStory() {
           <div className="preview-message preview-message-right">
             <span>Already home 💜</span>
           </div>
-          <div className="preview-reaction">💜 <span>2</span></div>
-          <div className="preview-typing"><i /><i /><i /><span>Maya is typing</span></div>
+          <div className="preview-reaction">
+            💜 <span>2</span>
+          </div>
+          <div className="preview-typing">
+            <i />
+            <i />
+            <i />
+            <span>Maya is typing</span>
+          </div>
         </div>
 
         <div className="story-people">
@@ -43,11 +61,6 @@ export default function AuthStory() {
             <span>Join your favorite conversations.</span>
           </div>
         </div>
-      </div>
-
-      <div className="story-footer">
-        <span>© 2026 ORBIT</span>
-        <span>THOUGHTFULLY MADE FOR YOU</span>
       </div>
     </section>
   );

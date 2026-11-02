@@ -7,7 +7,7 @@
 @import "./components/messageList/MessageList.css";
 @import "./components/messageComposer/MessageComposer.css";
 @import "./components/sharedMediaPanel/SharedMediaPanel.css";
-@import "./pages/ChatPage.css";
+@import "./pages/Dashboard.css";
 @import "./pages//auth//login//Login.css";
 @import "./components/loadingScreen/LoadingScreen.css";
 @import "./pages/ChatLoading.css";
