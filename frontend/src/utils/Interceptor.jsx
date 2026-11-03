@@ -1,13 +1,14 @@
 import axios from "axios"
+import { TOKEN } from "../utils/constants"
 
-const BASE_URL = 5002
+const BASE_URL = "http://localhost:5002"
 
 const setupInterceptor = () => {
     axios.defaults.baseURL = BASE_URL
 
     axios.interceptors.request.use(
         (config) => {
-            const token = localStorage.getItem("token")
+            const token = localStorage.getItem(TOKEN)
             if (token) {
                 config.headers["Authorization"] = `Bearer ${token}`
             }

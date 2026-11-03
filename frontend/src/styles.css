@@ -11,3 +11,4 @@
 @import "./pages//auth//login//Login.css";
 @import "./components/loadingScreen/LoadingScreen.css";
 @import "./pages/ChatLoading.css";
+@import "./Media.css"

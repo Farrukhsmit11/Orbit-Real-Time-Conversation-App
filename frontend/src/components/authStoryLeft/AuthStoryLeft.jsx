@@ -1,4 +1,5 @@
 import Brand from "../brand/Brand.jsx";
+import "./AuthStoryLeft.css";
 
 export default function AuthStory() {
   return (

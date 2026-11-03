@@ -1,0 +1,63 @@
+@media (max-width: 900px) {
+    .login-page {
+        grid-template-columns: minmax(0, .9fr) minmax(430px, 1fr);
+    }
+
+    .login-story {
+        padding-left: 38px;
+        padding-right: 38px;
+    }
+
+    .story-content h1 {
+        font-size: 40px;
+    }
+
+    .story-preview {
+        margin-top: 26px;
+    }
+}
+
+@media (max-width: 700px) {
+    .login-page {
+        display: block;
+        min-height: 100vh;
+    }
+
+    .login-story {
+        display: none;
+    }
+
+    .login-form-section {
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: 24px 24px 20px;
+    }
+
+    .login-mobile-brand {
+        width: min(100%, 375px);
+        margin: auto;
+    }
+
+    .login-mobile-brand .brand {
+        font-size: 22px;
+    }
+
+    .login-legal {
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 420px) {
+    .login-form-section {
+        padding: 20px 20px 18px;
+    }
+
+    .auth-card h2 {
+        font-size: 28px;
+    }
+
+    .login-legal {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

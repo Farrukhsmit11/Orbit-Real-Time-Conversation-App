@@ -1,0 +1,67 @@
+.auth-main {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.auth-form>label:not(.remember-me),
+.password-label label {
+    color: #d3d0db;
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.auth-form .ant-input-affix-wrapper {
+    min-height: 44px;
+    margin-bottom: 18px;
+    border-color: rgba(255, 255, 255, .09);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .035);
+    box-shadow: none;
+    gap: 7px;
+}
+
+.auth-form .ant-input-affix-wrapper:hover,
+.auth-form .ant-input-affix-wrapper-focused {
+    border-color: rgba(157, 139, 255, .65);
+    background: rgba(255, 255, 255, .045);
+}
+
+.auth-form .ant-input-affix-wrapper .ant-input {
+    color: #f2effa;
+    background: transparent;
+    font-size: 13px;
+}
+
+.auth-form .ant-input-affix-wrapper .ant-input::placeholder {
+    color: #706d7b;
+}
+
+.auth-form .ant-input-affix-wrapper,
+.auth-form .ant-input-affix-wrapper:hover,
+.auth-form .ant-input-affix-wrapper:focus,
+.auth-form .ant-input-affix-wrapper-focused {
+    background: rgba(255, 255, 255, .035);
+}
+
+.auth-form input:-webkit-autofill,
+.auth-form input:-webkit-autofill:hover,
+.auth-form input:-webkit-autofill:focus,
+.auth-form input:-webkit-autofill:active {
+    -webkit-text-fill-color: #f2effa !important;
+    caret-color: #f2effa;
+    -webkit-box-shadow: 0 0 0 1000px #191820 inset !important;
+    transition: background-color 9999s ease-out 0s;
+}
+
+.auth-form .ant-input-prefix,
+.auth-form .ant-input-password-icon {
+    color: #898596;
+}

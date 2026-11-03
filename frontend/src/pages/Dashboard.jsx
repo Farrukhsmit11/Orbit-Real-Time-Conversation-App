@@ -17,13 +17,15 @@ const Dashboard = () => {
         {sidebarOpen && <button className="mobile-backdrop" onClick={() => setSidebarOpen(false)} aria-label="Close conversations" />}
 
         <section className="chat-panel">
+
           <ChatHeader person={activePerson} onMenu={() => setSidebarOpen(true)} />
+
           <div className="chat-layout">
+
             <section className="conversation">
+
               <div className="pinned-banner">
-                <div className="pin-icon">⌑
-                  
-                </div>
+
                 <div className="pinned-copy"><span>PINNED MESSAGE</span><strong>Design review moved to Thursday, 2:30 PM</strong>
 
                 </div>
