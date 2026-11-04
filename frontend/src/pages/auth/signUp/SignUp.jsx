@@ -13,6 +13,7 @@ import { handleSignup } from "../../../store/features/actions/authActions";
 import { useNavigate } from 'react-router-dom';
 
 const SignUp = ({ onLogin }) => {
+  
   const [form] = AntForm.useForm();
 
   const { signUpLoading } = useSelector((state) => state.auth);

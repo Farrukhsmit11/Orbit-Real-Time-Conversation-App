@@ -4,17 +4,15 @@ import { TOKEN } from "../../../utils/constants"
 
 export const handleLogin = createAsyncThunk(
     "auth/login",
-    async ({ email, password }, { rejectWithValue }) => {
+    async ({ email, password }, { rejectWithValue, dispatch }) => {
         try {
             const response = await post("/login", {
                 email,
                 password
             })
-            if (response.data.token) {
-                localStorage.setItem(TOKEN, response.data.token)
-            }
+            localStorage.setItem(TOKEN, response.data?.token)
+            dispatch(getProfile())
             return response.data
-            
         } catch (error) {
             return rejectWithValue(
                 error.response?.data ?? { message: error.message }

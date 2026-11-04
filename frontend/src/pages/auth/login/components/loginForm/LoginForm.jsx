@@ -1,8 +1,6 @@
-import { Button, Divider, message } from "antd";
+import { Button } from "antd";
 import {
-    AppleOutlined,
     ArrowRightOutlined,
-    GoogleOutlined,
     LockOutlined,
     MailOutlined,
 } from "@ant-design/icons";
@@ -12,30 +10,27 @@ import FormPasswordInput from "../../../../../uiComponents/formPasswordInput/For
 import { loginSchema } from "./Validation";
 import { handleLogin } from "../../../../../store/features/actions/authActions";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { Form as AntForm } from "antd"
+import { useState } from "react";
 
 const LoginForm = ({ onCreateAccount }) => {
 
     const dispatch = useDispatch();
 
-    const navigate = useNavigate();
-
     const [form] = AntForm.useForm();
 
-    const onSubmit = async (values) => {
+    const [email, setEmail] = useState([])
+    const [password, setPassword] = useState([])
+
+    const onSubmit = async () => {
         try {
             await dispatch(handleLogin({
-                email: values.email,
-                password: values.password
+                email,
+                password
             })).unwrap()
 
-            navigate("/dashboard")
-
         } catch (error) {
-            message.error(error?.message ?? "Unable to sign in. Please try again.");
-        } finally {
-            setSubmitting(false);
+            console.error("error logging in", error)
         }
     }
 
@@ -75,7 +70,9 @@ const LoginForm = ({ onCreateAccount }) => {
                                     id="login-email"
                                     prefix={<MailOutlined />}
                                     placeholder="you@example.com"
+                                    onChange={(e) => setEmail(e.target.value)}
                                     type="email"
+                                    value={email}
                                     autoComplete="email"
                                 />
                             </AntForm.Item>
@@ -86,6 +83,8 @@ const LoginForm = ({ onCreateAccount }) => {
                                 <FormPasswordInput
                                     prefix={<LockOutlined />}
                                     placeholder="Enter your password"
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    value={password}
                                     autoComplete="current-password"
                                 />
                             </AntForm.Item>
@@ -96,6 +95,7 @@ const LoginForm = ({ onCreateAccount }) => {
                                     type="primary"
                                     htmlType="submit"
                                     block
+                                    onClick={onSubmit}
                                 >
                                     Sign in to Orbit <ArrowRightOutlined />
                                 </Button>

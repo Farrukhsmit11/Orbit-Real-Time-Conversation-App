@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken"
 import { User } from "../models/User.js"
 
-export const authMiddleware = async (req, res, next) => {
+const authMiddleware = async (req, res, next) => {
     try {
         const token = req.headers.authorization.split[" "][1]
 
@@ -24,3 +24,5 @@ export const authMiddleware = async (req, res, next) => {
         console.error("Error authenticating user", error)
     }
 }
+
+export default authMiddleware
