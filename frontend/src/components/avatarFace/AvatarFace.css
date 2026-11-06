@@ -6,32 +6,54 @@
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12);
 }
 
-.avatar-you {
-  background: linear-gradient(140deg, #efaa8d, #a65c67);
-}
-
+.avatar-you,
 .avatar-lilac {
-  background: linear-gradient(145deg, #a692e8, #7163bd);
+  background: var(--accent-strong);
 }
 
 .avatar-coral {
-  background: linear-gradient(145deg, #eea083, #c36c79);
+  background: #c97769;
 }
 
 .avatar-mint {
-  background: linear-gradient(145deg, #70c4ae, #428c85);
+  background: #4b9b80;
 }
 
 .avatar-blue {
-  background: linear-gradient(145deg, #739de0, #5362a6);
+  background: #557fb4;
 }
 
 .avatar-gold {
-  background: linear-gradient(145deg, #eac57b, #b37b5e);
+  background: #a9864e;
 }
 
 .avatar-plum {
-  background: linear-gradient(145deg, #c47dbb, #865d9d);
+  background: #8965a9;
+}
+
+.message-avatar.avatar-lilac,
+.message-avatar.avatar-you {
+  background: var(--accent-strong);
+}
+
+.message-avatar.avatar-coral {
+  background: #c97769;
+}
+
+.message-avatar.avatar-mint {
+  background: #4b9b80;
+}
+
+.message-avatar.avatar-blue {
+  background: #557fb4;
+}
+
+.message-avatar.avatar-gold {
+  background: #a9864e;
+}
+
+.message-avatar.avatar-plum {
+  background: #8965a9;
 }
 
 .status-dot {

@@ -1,7 +1,6 @@
-@import "./styles/global.css";
 @import "./components//brand/Brand.css";
 @import "./components/avatarFace/AvatarFace.css";
-@import "./components/avatarFace/AvatarFace.css";
+@import "./components/conversationSidebar/ConversationSidebar.css";
 @import "./components/chatHeader/ChatHeader.css";
 @import "./components/messageBubble/MessageBubble.css";
 @import "./components/messageList/MessageList.css";

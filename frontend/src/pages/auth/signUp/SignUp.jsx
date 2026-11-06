@@ -1,37 +1,27 @@
 import "../../auth/Auth.css";
 import FormInput from "../../../uiComponents/formInput/FormInput";
 import { Form as AntForm, Button, message } from "antd";
-import {
-  ArrowRightOutlined,
-  LockOutlined,
-  MailOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
 import FormPasswordInput from "../../../uiComponents/formPasswordInput/FormPasswordInput";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { handleSignup } from "../../../store/features/actions/authActions";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { Formik } from "formik";
 
 const SignUp = ({ onLogin }) => {
-  
   const [form] = AntForm.useForm();
 
-  const { signUpLoading } = useSelector((state) => state.auth);
-
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = async (values) => {
     try {
-      await dispatch(handleSignup(values))
-        .unwrap();
+      await dispatch(handleSignup(values)).unwrap();
       message.success("Account created successfully");
       if (onLogin) {
         onLogin();
       } else {
         navigate("/");
       }
-
     } catch (error) {
       message.error(error?.message ?? "Unable to create your account");
     }
@@ -42,66 +32,80 @@ const SignUp = ({ onLogin }) => {
       <div className="auth-main">
         <div className="auth-card">
           <div className="auth-header">
-            <h2>Create Your Account</h2>
-            <p>Join To Start Conversations</p>
+            <h1 className="auth-title">Create Account</h1>
+
+            <p className="auth-subtitle">
+              Your conversations, all in one place. Join Orbit and Get started.
+            </p>
+
+            <Formik
+              initialValues={{ email: "", password: "", rememberMe: true }}
+            >
+              {({
+                errors,
+                handleBlur,
+                handleChange,
+                handleSubmit,
+                touched,
+                values,
+              }) => (
+                <AntForm
+                  className="auth-form"
+                  form={form}
+                  layout="vertical"
+                  noValidate
+                >
+                  <AntForm.Item
+                    label={<span className="form-label">Name</span>}
+                  >
+                    <FormInput
+                      placeholder="Enter your Name"
+                      type="name"
+                      name="name"
+                      className="c-input"
+                    ></FormInput>
+                  </AntForm.Item>
+
+                  <AntForm.Item
+                    label={<span className="form-label">Email</span>}
+                  >
+                    <FormInput
+                      placeholder="Enter your email"
+                      type="email"
+                      name="email"
+                      className="c-input"
+                    ></FormInput>
+                  </AntForm.Item>
+
+                  <AntForm.Item
+                    label={<span className="form-label">Password</span>}
+                  >
+                    <FormPasswordInput
+                      placeholder="Enter Password"
+                      className="c-input"
+                    ></FormPasswordInput>
+                  </AntForm.Item>
+
+                  <div className="form-footer">
+                    <a href="#">Forgot Password?</a>
+                  </div>
+
+                  <div className="auth-actions">
+                    <Button
+                      className="submit-btn-black"
+                      onClick={() => onCreateAccount()}
+                    >
+                      Sign Up
+                    </Button>
+
+                    <Button className="submit-btn" onClick={() => onLogin()}>
+                      Log in
+                    </Button>
+                  </div>
+                </AntForm>
+              )}
+            </Formik>
           </div>
-
-          <AntForm
-            form={form}
-            className="auth-form"
-            layout="vertical"
-            initialValues={{ name: "", email: "", password: "" }}
-            onFinish={handleSubmit}
-          >
-            <AntForm.Item
-              label="Name"
-              name="name"
-            >
-              <FormInput
-                name="name"
-                prefix={<UserOutlined />}
-                placeholder="Enter your name"
-                autoComplete="name"
-              />
-            </AntForm.Item>
-
-            <AntForm.Item
-              label="Email address"
-              name="email"
-
-            >
-              <FormInput
-                name="email"
-                prefix={<MailOutlined />}
-                placeholder="you@example.com"
-                type="email"
-                autoComplete="email"
-              />
-            </AntForm.Item>
-
-            <AntForm.Item
-              name="password"
-              label="Password"
-
-            >
-              <FormPasswordInput
-                name="password"
-                prefix={<LockOutlined />}
-                placeholder="Enter your password"
-                autoComplete="new-password"
-              />
-            </AntForm.Item>
-
-            <Button
-              className="login-submit"
-              type="primary"
-              htmlType="submit"
-              block
-              loading={signUpLoading}
-            >
-              Create Account With Orbit <ArrowRightOutlined />
-            </Button>
-          </AntForm>
         </div>
       </div>
     </>

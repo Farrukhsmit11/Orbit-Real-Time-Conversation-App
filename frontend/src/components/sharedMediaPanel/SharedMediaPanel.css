@@ -58,15 +58,15 @@
 }
 
 .media-one {
-  background: linear-gradient(135deg, #a482ac, #e9bd9d);
+  background: rgba(137, 120, 238, .2);
 }
 
 .media-two {
-  background: linear-gradient(135deg, #5b5e89, #8e82bf);
+  background: rgba(137, 120, 238, .28);
 }
 
 .media-three {
-  background: linear-gradient(135deg, #c7797a, #e4ad85);
+  background: rgba(137, 120, 238, .36);
 }
 
 .shared-file {
@@ -82,13 +82,13 @@
   width: 33px;
   height: 33px;
   border-radius: 9px;
-  background: rgba(118, 154, 255, .14);
-  color: #9fb6ff;
+  background: var(--accent-soft);
+  color: #b7aaff;
 }
 
 .file-purple {
-  background: rgba(165, 128, 255, .14);
-  color: #b79aff;
+  background: var(--accent-soft);
+  color: #b7aaff;
 }
 
 .shared-file>span:last-child {

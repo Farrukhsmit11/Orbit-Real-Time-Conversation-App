@@ -35,7 +35,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: linear-gradient(145deg, #b6a6f1, #7d72bd);
+  background: var(--accent-strong);
   color: white;
   font: 700 10px "Manrope", sans-serif;
 }
@@ -84,7 +84,7 @@
 .bubble-mine {
   color: #fbfaff;
   border-color: rgba(183, 167, 255, .21);
-  background: linear-gradient(135deg, #7160ce, #6253b2);
+  background: var(--accent-strong);
   border-radius: 15px 4px 15px 15px;
   box-shadow: 0 5px 17px rgba(91, 74, 190, .11);
 }
@@ -206,7 +206,7 @@
   border-radius: 9px;
   color: #d3cbff;
   font-size: 19px;
-  background: linear-gradient(145deg, #8c7bf1, #6157ad);
+  background: var(--accent-strong);
 }
 
 .attachment-copy {

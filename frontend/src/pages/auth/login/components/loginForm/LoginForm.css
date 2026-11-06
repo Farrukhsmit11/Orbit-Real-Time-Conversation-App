@@ -1,0 +1,54 @@
+.auth-title {
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.form-footer {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: right;
+}
+
+.form-footer a {
+    font-weight: 600;
+}
+
+.submit-btn {
+    background: #0059F7 !important;
+    height: 38px;
+    border: none;
+    color: white !important;
+}
+
+
+.submit-btn-black {
+    background: black !important;
+    height: 38px;
+    border: none;
+    color: white !important;
+}
+
+
+
+.c-input {
+    height: 41px;
+    border: 1px solid #DEEAFF;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.form-label {
+    color: black;
+    font-weight: 500;
+}
+
+.login-page .auth-form .ant-input::placeholder {
+    color: black !important;
+    font-size: 14px;
+}
+
+.auth-actions {
+    display: flex;
+    gap: 13px;
+    flex-direction: column;
+}

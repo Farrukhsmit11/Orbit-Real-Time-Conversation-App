@@ -8,6 +8,7 @@ const FormPasswordInput = ({
     onChange,
     onBlur,
     value,
+    className,
     ...props
 }) => {
     return (
@@ -17,6 +18,7 @@ const FormPasswordInput = ({
             type={type}
             label={label}
             onChange={onChange}
+            className={className}
             onBlur={onBlur}
             value={value}
             {...props}

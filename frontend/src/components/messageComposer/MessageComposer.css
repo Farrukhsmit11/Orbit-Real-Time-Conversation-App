@@ -88,7 +88,7 @@
   width: 34px;
   height: 34px;
   border: 0;
-  background: linear-gradient(145deg, #9b8cff, #7461e1);
+  background: var(--accent-strong);
   box-shadow: 0 5px 13px rgba(111, 88, 223, .3);
   flex: 0 0 34px;
 }

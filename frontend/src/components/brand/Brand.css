@@ -20,7 +20,7 @@
   border-radius: 10px;
   display: grid;
   place-items: center;
-  background: linear-gradient(145deg, #a899ff, #6751e8);
+  background: var(--accent-strong);
   box-shadow: 0 5px 16px #806cff50;
   transform: rotate(-8deg);
 }

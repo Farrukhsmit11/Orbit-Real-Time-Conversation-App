@@ -1,52 +1,33 @@
-import { Button } from "antd";
-import {
-    ArrowRightOutlined,
-    LockOutlined,
-    MailOutlined,
-} from "@ant-design/icons";
+import { Button, Form as AntForm, message, Checkbox } from "antd";
 import FormInput from "../../../../../uiComponents/formInput/FormInput";
 import { Formik } from "formik";
 import FormPasswordInput from "../../../../../uiComponents/formPasswordInput/FormPasswordInput";
 import { loginSchema } from "./Validation";
 import { handleLogin } from "../../../../../store/features/actions/authActions";
 import { useDispatch } from "react-redux";
-import { Form as AntForm } from "antd"
-import { useState } from "react";
+import "./LoginForm.css"
 
 const LoginForm = ({ onCreateAccount }) => {
-
     const dispatch = useDispatch();
 
-    const [form] = AntForm.useForm();
-
-    const [email, setEmail] = useState([])
-    const [password, setPassword] = useState([])
-
-    const onSubmit = async () => {
+    const onSubmit = async ({ email, password }) => {
         try {
             await dispatch(handleLogin({
                 email,
                 password
             })).unwrap()
-
         } catch (error) {
-            console.error("error logging in", error)
+            console.error("Error logging in", error)
         }
     }
 
     return (
         <div className="auth-main">
             <div className="auth-card">
-                <div className="auth-header">
-                    <div className="welcome-tag">
-                        <span>✳</span> WELCOME BACK
-                    </div>
-
-                    <h2>Good to see you.</h2>
-                    <p className="login-subtitle">
-                        Sign in to pick up right where you left off.
-                    </p>
-                </div>
+                <h1 className="auth-title">Welcome Back</h1>
+                <p className="auth-subtitle">
+                    Sign in to pick up where you left off and catch up with your people.
+                </p>
 
                 <Formik
                     initialValues={{ email: "", password: "", rememberMe: true }}
@@ -54,65 +35,56 @@ const LoginForm = ({ onCreateAccount }) => {
                     onSubmit={onSubmit}
                 >
                     {({
+                        errors,
+                        handleBlur,
+                        handleChange,
                         handleSubmit,
+                        isSubmitting,
+                        touched,
+                        values,
                     }) => (
-
                         <AntForm
                             className="auth-form"
                             onSubmit={handleSubmit}
-                            form={form}
                             layout="vertical"
+                            noValidate
                         >
-                            <label htmlFor="login-email">Email address</label>
-
-                            <AntForm.Item>
+                            <AntForm.Item label={<span className="form-label">Email</span>}>
                                 <FormInput
-                                    id="login-email"
-                                    prefix={<MailOutlined />}
-                                    placeholder="you@example.com"
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="Enter your email"
                                     type="email"
-                                    value={email}
-                                    autoComplete="email"
-                                />
-                            </AntForm.Item>
-
-                            <label htmlFor="login-password">Password</label>
-
-                            <AntForm.Item>
-                                <FormPasswordInput
-                                    prefix={<LockOutlined />}
-                                    placeholder="Enter your password"
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    value={password}
-                                    autoComplete="current-password"
-                                />
-                            </AntForm.Item>
-
-                            <div className="auth-footer">
-                                <Button
-                                    className="login-submit"
-                                    type="primary"
-                                    htmlType="submit"
-                                    block
-                                    onClick={onSubmit}
+                                    name="email"
+                                    className="c-input"
                                 >
-                                    Sign in to Orbit <ArrowRightOutlined />
-                                </Button>
 
-                                <p className="signup-copy">
-                                    Don&apos;t have an account?{" "}
-                                    <a
-                                        href="#signup"
-                                        onClick={(event) => {
-                                            event.preventDefault();
-                                            onCreateAccount?.();
-                                        }}
-                                    >
-                                        Create one
-                                    </a>
-                                </p>
+
+                                </FormInput>
+                            </AntForm.Item>
+
+                            <AntForm.Item label={<span className="form-label">Password</span>}>
+                                <FormPasswordInput
+                                    placeholder="Enter Password"
+                                    className="c-input"
+
+                                >
+
+                                </FormPasswordInput>
+                            </AntForm.Item>
+
+
+                            <div className="form-footer">
+                                <a href="#">Forgot Password?</a>
                             </div>
+
+
+                            <div className="auth-actions">
+                                <Button className="submit-btn">Log in</Button>
+                                <Button
+                                    className="submit-btn-black"
+                                    onClick={() => onCreateAccount()}
+                                >Sign Up</Button>
+                            </div>
+
                         </AntForm>
                     )}
                 </Formik>

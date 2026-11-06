@@ -1,55 +1,54 @@
-import Brand from "../brand/Brand.jsx";
 import "./AuthStoryLeft.css";
 
 export default function AuthStory() {
   return (
     <section className="login-story">
-      <Brand className="login-brand" />
-
       <div className="story-glow story-glow-one" />
       <div className="story-glow story-glow-two" />
 
-      <div className="story-content">
+      <div className="story-copy">
         <div className="story-eyebrow">
           <span /> YOUR PEOPLE, A LITTLE CLOSER
         </div>
-
         <h1>
-          Good conversations
+          Conversations that
           <br />
-          change <span>everything.</span>
+          make life feel <span>closer.</span>
         </h1>
+        <p>A little more space for the people and conversations that matter.</p>
+      </div>
 
-        <p>
-          A calmer, more considered space for the people and ideas you care
-          about.
-        </p>
-
-        <div className="story-preview">
-          <div className="preview-topline">
-            <span className="preview-live">
-              <i /> live conversation
-            </span>
-            <span>just now</span>
-          </div>
-          <div className="preview-message preview-message-left">
-            <span className="preview-avatar avatar-lilac">M</span>
-            <span>Have you seen the new space? It feels like us ✨</span>
-          </div>
-          <div className="preview-message preview-message-right">
-            <span>Already home 💜</span>
-          </div>
-          <div className="preview-reaction">
-            💜 <span>2</span>
-          </div>
-          <div className="preview-typing">
-            <i />
-            <i />
-            <i />
-            <span>Maya is typing</span>
-          </div>
+      <div className="story-art" aria-hidden="true">
+        <span className="art-orbit art-orbit-one" />
+        <span className="art-orbit art-orbit-two" />
+        <div className="art-message art-message-one">
+          <span className="art-avatar art-avatar-maya">M</span>
+          <span>Made it home. That was lovely ✨</span>
         </div>
+        <div className="art-message art-message-two">
+          <span>Already planning the next one 💜</span>
+        </div>
+        <div className="art-message art-message-three">
+          <span className="art-avatar art-avatar-james">J</span>
+          <span>Count me in!</span>
+        </div>
+        <div className="art-typing" role="status" aria-label="Maya is typing">
+          <span className="art-avatar art-avatar-maya">M</span>
+          <span className="art-typing-copy">Maya is typing</span>
+          <span className="art-typing-dots" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+          </span>
+        </div>
+        <div className="art-reaction">💜 <span>3</span></div>
+        <div className="art-caption">
+          <span className="art-live-dot" />
+          YOUR PEOPLE ARE JUST A MESSAGE AWAY
+        </div>
+      </div>
 
+      <div className="story-content">
         <div className="story-people">
           <div className="people-stack">
             <span className="avatar-lilac">M</span>
@@ -59,7 +58,7 @@ export default function AuthStory() {
           </div>
           <div>
             <strong>A little more connected.</strong>
-            <span>Join your favorite conversations.</span>
+            <span>Come pick up where you left off.</span>
           </div>
         </div>
       </div>

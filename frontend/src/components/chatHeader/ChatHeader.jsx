@@ -9,7 +9,7 @@ import {
 import { Button } from "antd";
 import { AvatarFace } from "../index";
 
-const ChatHeader = () => {
+const ChatHeader = ({ person, onMenu }) => {
   return (
     <header className="chat-header">
       <Button
@@ -22,9 +22,11 @@ const ChatHeader = () => {
 
       <AvatarFace person={person} online={person.online} size={42} />
 
-      <div className="connection-pill">
-        <i className="connection-dot" />
-        <span>Connected</span>
+      <div className="chat-contact">
+        <strong className="contact-name">{person.name}</strong>
+        <span className="contact-status">
+          {person.online ? "Online now" : person.group ? "Group conversation" : "Last seen recently"}
+        </span>
       </div>
 
       <div className="header-actions">

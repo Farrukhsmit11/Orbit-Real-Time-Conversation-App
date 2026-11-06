@@ -21,47 +21,48 @@
 .auth-form .ant-input-affix-wrapper {
     min-height: 44px;
     margin-bottom: 18px;
-    border-color: rgba(255, 255, 255, .09);
+    border-color: #e7e6ef;
     border-radius: 10px;
-    background: rgba(255, 255, 255, .035);
+    background: #fff;
     box-shadow: none;
     gap: 7px;
 }
 
 .auth-form .ant-input-affix-wrapper:hover,
 .auth-form .ant-input-affix-wrapper-focused {
-    border-color: rgba(157, 139, 255, .65);
-    background: rgba(255, 255, 255, .045);
+    border-color: #8d87f4;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(99, 93, 236, .09);
 }
 
 .auth-form .ant-input-affix-wrapper .ant-input {
-    color: #f2effa;
+    color: #292838;
     background: transparent;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .auth-form .ant-input-affix-wrapper .ant-input::placeholder {
-    color: #706d7b;
+    color: #a4a3b0;
 }
 
 .auth-form .ant-input-affix-wrapper,
 .auth-form .ant-input-affix-wrapper:hover,
 .auth-form .ant-input-affix-wrapper:focus,
 .auth-form .ant-input-affix-wrapper-focused {
-    background: rgba(255, 255, 255, .035);
+    background: #fff;
 }
 
 .auth-form input:-webkit-autofill,
 .auth-form input:-webkit-autofill:hover,
 .auth-form input:-webkit-autofill:focus,
 .auth-form input:-webkit-autofill:active {
-    -webkit-text-fill-color: #f2effa !important;
-    caret-color: #f2effa;
-    -webkit-box-shadow: 0 0 0 1000px #191820 inset !important;
+    -webkit-text-fill-color: #292838 !important;
+    caret-color: #292838;
+    -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
     transition: background-color 9999s ease-out 0s;
 }
 
 .auth-form .ant-input-prefix,
 .auth-form .ant-input-password-icon {
-    color: #898596;
+    color: #8d8c9a;
 }

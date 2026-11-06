@@ -5,9 +5,7 @@
   min-height: 620px;
   padding: 14px;
   gap: 12px;
-  background:
-    radial-gradient(ellipse at 68% 0%, rgba(99, 78, 177, .105), transparent 38%),
-    #101116;
+  background: #101116;
   color: var(--text);
 }
 
@@ -42,7 +40,7 @@
   padding: 10px 12px;
   border-radius: 11px;
   border: 1px solid rgba(155, 137, 255, .15);
-  background: linear-gradient(105deg, rgba(134, 115, 239, .1), rgba(255, 255, 255, .018));
+  background: rgba(137, 120, 238, .07);
 }
 
 .pin-icon {

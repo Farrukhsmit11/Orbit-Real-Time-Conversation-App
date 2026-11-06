@@ -7,6 +7,7 @@ const FormInput = ({
     label,
     onChange,
     onBlur,
+    className,
     value,
     ...props
 }) => {
@@ -16,6 +17,7 @@ const FormInput = ({
             placeholder={placeholder}
             type={type}
             onChange={onChange}
+            className={className}
             onBlur={onBlur}
             value={value}
             {...props}

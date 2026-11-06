@@ -34,14 +34,13 @@
   position: absolute;
   content: "";
   inset: 0;
-  transform: translateX(-100%);
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .065), transparent);
-  animation: skeleton-shimmer 1.35s infinite;
+  background: rgba(255, 255, 255, .035);
+  animation: skeleton-shimmer 1.35s infinite alternate;
 }
 
 @keyframes skeleton-shimmer {
   to {
-    transform: translateX(100%);
+    opacity: .7;
   }
 }
 
